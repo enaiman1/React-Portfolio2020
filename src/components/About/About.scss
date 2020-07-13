@@ -1,0 +1,116 @@
+@import "../../main.scss";
+@import "../../sass/animations.scss";
+
+.about {
+  // width: 75%;
+  // margin: 0 auto;
+  // box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+  // background-color: rgba($color-white, 0.6);
+  // border-radius: 10px;
+  // padding: 6rem;
+  // padding-left: 9rem;
+  // font-size: $default-font-size;
+  // transform: skewX(-12deg);
+
+  &__shape {
+    width: 20rem;
+    height: 20rem;
+    float: left;
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      border-radius: none;
+    }
+
+    
+
+    @media only screen and (max-width: $bp-small) {
+      transform: skewX(0deg);
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    transform: translateX(-2rem) scale(1.13);
+    backface-visibility: hidden;
+    transition: all 0.5s;
+    margin-right: 1rem;
+
+    @media only screen and (max-width: $bp-small) {
+      transform: translateX(-1rem) scale(1.13);
+    }
+    @media only screen and (max-width: $bp-large) {
+      transform: translateX(1.4rem) scale(1.13);
+      height: 90%;
+      width: 90%;
+      margin-right: 2rem;
+    }
+  }
+
+  &__text {
+    transform: skewX(12deg);
+    margin: 1rem auto;
+    text-align: justify;
+    padding: 2rem;
+    width: 95%;
+    
+
+    p {
+      font-size: 2rem;
+      padding: 1rem 3rem;
+
+      @media only screen and (max-width: $bp-largest) {
+        padding: 1rem 2rem;
+      }
+      @media only screen and (max-width: $bp-large) {
+        padding: 1rem 2rem;
+        margin-right: 0.5rem;
+      }
+      @media only screen and (max-width: $bp-small) {
+       
+      }
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      margin-left: 2rem;
+      margin-top: 2rem;
+      transform: skewX(13.5deg);
+    }
+  
+    @media only screen and (max-width: $bp-small) {
+      transform: skewX(0deg);
+    }
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__img {
+    transform: translateX(-0.5rem) scale(1);
+    filter: blur(3px) brightness(80%);
+  }
+}

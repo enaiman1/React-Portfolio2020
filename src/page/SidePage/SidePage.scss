@@ -1,0 +1,272 @@
+@import "../../main.scss";
+@import "../../sass/animations.scss";
+
+.sidePage {
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    background-color: $color-white;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 4rem;
+    right: 5rem;
+    border-radius: 50%;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.5);
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 4.5rem;
+    right: 5.5rem;
+    z-index: 10;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    background: linear-gradient(
+      45.34deg,
+      $primary-color-light,
+      $primary-color,
+      $primary-color-dark-1
+    );
+    background-size: 600% 600%;
+
+    -webkit-animation: gradientBG 50s ease infinite;
+    -moz-animation: gradientBG 50s ease infinite;
+    animation: gradientBG 50s ease infinite;
+  }
+
+  &__nav {
+    height: 100vh;
+    position: fixed;
+    top: 4%;
+    left: 0;
+    z-index: 1500;
+    opacity: 0;
+    width: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    @media only screen and (max-width: $bp-small) {
+      top: 10%;
+  }
+  }
+// this is for the nav button and the animation
+  &__ul {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 3rem;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+
+    @media only screen and (max-width: $bp-small) {
+     font-size: 2rem;
+  }
+
+    li {
+      display: inline-block;
+      list-style: outside none none;
+      margin: 0.5em 1em;
+      overflow: hidden;
+      position: relative;
+      border-radius: 3px;
+    }
+    li:before,
+    li:after {
+      display: block;
+    }
+
+    li:before {
+      left: 0%;
+    }
+
+    li:after {
+      left: 50%;
+    }
+  
+
+    li:before,
+    li:after {
+      background-color: $color-white;
+      position: absolute;
+      width: 26%;
+      top: 50%;
+      bottom: 50%;
+      content: "";
+      z-index: -1;
+      opacity: 0;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+    }
+    li:before {
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
+    }
+
+    li:after {
+      -webkit-transition-delay: 0.1s;
+      transition-delay: 0.1s;
+    }
+   
+    li:hover:before,
+    li:hover:after,
+    li:hover 
+    li:hover {
+      opacity: 1;
+      top: 0;
+      bottom: 0;
+    }
+    li:hover:before {
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
+    }
+    li:hover:after {
+      -webkit-transition-delay: 0.15s;
+      transition-delay: 0.15s;
+    }
+    li:hover{
+      -webkit-transition-delay: 0.075s;
+      transition-delay: 0.075s;
+    }
+    li:hover{
+      -webkit-transition-delay: 0.225s;
+      transition-delay: 0.225s;
+    }
+  }
+
+  // this is the container for about,tech, contact components
+  &__container {
+    width: 75%;
+    height: 70vh;
+    margin: 6rem auto;
+    box-shadow: -2rem 2rem 3rem rgba($color-white, 0.4);
+    background-color: rgba($color-white, 0.6);
+    border-radius: 10px;
+    padding: 4rem;
+    padding-left: 9rem;
+  
+    transform: skewX(-12deg);
+
+     
+
+    @media only screen and (max-width: $bp-large) {
+    width: 85%;
+    transform: skewX(-10deg);
+      padding: 3rem;
+      padding-left: 5rem;
+  
+      box-shadow: -1rem 1rem 1rem rgba($color-white, 0.4);
+    }
+    @media only screen and (max-width: $bp-medium) {
+    transform: skewX(-8deg);
+    }
+
+     @media only screen and (max-width: $bp-small) {
+      transform: skewX(0deg);
+      margin: 4rem auto;
+      padding: 2rem;
+      padding-left: 1rem;
+      width: 80%;
+      height: 70vh;
+      box-shadow: -1rem 1rem 1rem rgba($color-white, 0.3);
+
+      overflow: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  
+  }
+
+ 
+  // functionality
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
+  }
+
+  // icon
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $primary-color;
+      display: inline-block;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+    &::after {
+      top: 0.8rem;
+    }
+  }
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}
+
+// Heading for all about, tech, contact components
+.heading-secondary {
+  text-transform: uppercase;
+  color:$color-white;
+  text-shadow: $heading-shadow;
+  backface-visibility: hidden;
+  margin-bottom: 3rem;
+
+  
+  font-family: 'Alegreya SC', serif;
+  font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.2rem;
+    text-align: center;
+
+    @media only screen and (max-width: $bp-large) {
+      margin-bottom: 4rem;
+  }
+  
+    @media only screen and (max-width: $bp-small) {
+      margin-bottom: 5rem;
+  }
+  
+}

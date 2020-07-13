@@ -1,0 +1,199 @@
+@import "../../main.scss";
+@import "../../sass/animations.scss";
+
+.card {
+  width: 35.5rem;
+  max-height: 22rem;
+  animation-name: grow;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+
+    @media only screen and (max-width: $bp-largest) {
+   width: 33.5rem;
+  }
+    @media only screen and (max-width: $bp-small) {
+   width: 45.5rem;
+  }
+
+  &__header {
+    background-color: $color-white;
+    position: relative;
+    height: 6rem;
+    margin: 0 1rem;
+    color: $primary-color;
+    text-align: center;
+    width:100%;
+    
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      width: 33.5rem;
+   
+     }
+       @media only screen and (max-width: $bp-small) {
+      width: 45.5rem;
+     }
+
+     &__title{
+      font-size: 3rem;
+      margin: 1rem;
+     }
+  }
+
+  &__body {
+    font-family: "Playfair Display", Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+    margin: 0 1rem;
+     width: 35.5rem;;
+     height: 22rem;
+    color: #000000;
+    text-align: right;
+  
+    background-color: $primary-color;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      width: 33.5rem;
+     }
+       @media only screen and (max-width: $bp-small) {
+      width: 45.5rem;
+     }
+
+    & * {
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
+    }
+
+    &__img {
+      max-width: 100%;
+      backface-visibility: hidden;
+    }
+
+    //   caption body
+    &__caption {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      opacity: 1;
+      padding: 3rem 0 3rem 1rem;
+      background-color: rgba($primary-color, 0.9);
+      width: 40%;
+      -webkit-transform: translateX(-150%);
+      transform: translateX(-150%);
+    }
+
+    //  side arrow
+    &__caption:before {
+      position: absolute;
+      top: 45%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      left: 100%;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 15rem 0 15rem 15rem;
+      border-color: transparent transparent transparent $primary-color;
+
+      @media only screen and (max-width: $bp-large) {
+        border-width: 13rem 0 13rem 13rem;
+        top: 50%;
+       }
+      @media only screen and (max-width: $bp-medium) {
+        top: 50%;
+       }
+    }
+
+    //   little top arrow
+    &:after {
+      position: absolute;
+      bottom: 50%;
+      left: 40%;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 14rem 14rem 0 14rem;
+      border-color: rgba($primary-color-light, 0.8) transparent transparent
+        transparent;
+      -webkit-transform: translateY(-70%);
+      transform: translateY(-70%);
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
+
+      @media only screen and (max-width: $bp-large) {
+        left: 37%;
+       }
+      @media only screen and (max-width: $bp-small) {
+        left: 38%;
+       }
+    }
+
+  // This is for the p tag in the side arrow
+    p {
+      line-height: 1.5em;
+      -webkit-transform: translateX(2.5rem);
+      transform: translateX(2.5rem);
+      font-size: 1.5rem;
+      text-align: left;
+      color: $color-white;
+    }
+
+  
+// Github and link icons
+    &__icons {
+      position: absolute;
+      bottom: 0;
+      right: 5%;
+      padding: 1rem .5rem;
+
+      opacity: 0;
+      display: grid;
+      grid-template-columns: max-content;
+      grid-gap: 1rem;
+
+      &__link {
+        // font-size: 2rem;
+        color: $color-white;
+        border-radius: 50%;
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 2rem 2rem 3rem rgba($color-white, 0.8);
+        
+        }
+
+        @media only screen and (max-width: $bp-small) {
+          font-size: 1.5rem;
+         }
+      }  
+    }
+    // all hover effects for the cards
+
+    &:hover &__img {
+      transform: scale(1.4);
+      filter: alpha(opacity=50);
+      -webkit-opacity: 0.5;
+      opacity: 0.5;
+    }
+
+    &:hover:after,
+    &:hover &__caption,
+    &:hover &__icons {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+     
+    }
+
+    &:hover &__icons {
+       animation: moveInBottom 0.2s ease-out 0.75s;
+        animation-fill-mode: backwards;
+    }
+  }
+}

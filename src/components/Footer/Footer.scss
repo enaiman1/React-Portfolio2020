@@ -1,0 +1,35 @@
+@import "../../main.scss";
+@import "../../sass/animations.scss";
+
+.footer{
+width: 20rem;
+height: 18rem;
+background-color: rgba($color-white, 0.6);
+
+
+-webkit-clip-path: polygon(100% 0, 0 100%, 100% 100%);
+clip-path: polygon(100% 0, 0 100%, 100% 100%);
+position: absolute;
+bottom: 0%;
+right: 0%;
+z-index: 10;
+
+&__icons{
+    position: absolute;
+    bottom:0%;
+    right: 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+   grid-gap: 1rem;
+   margin: 1rem auto;
+
+
+
+    &__links{
+        color: $primary-color;
+        // font-size: 4rem;
+    }
+}
+
+
+}

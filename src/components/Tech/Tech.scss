@@ -1,0 +1,58 @@
+@import "../../main.scss";
+@import "../../sass/animations.scss";
+
+.tech {
+
+
+
+  &__text {
+    transform: skewX(12deg);
+    text-align: center;
+    padding: 5px;
+    display: grid;
+
+    grid-template-rows: repeat(2, 50px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+
+    grid-auto-rows: 80px;
+    grid-auto-flow: row;
+    @media only screen and (max-width: $bp-large) {
+      transform: skewX(8deg);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      transform: skewX(0deg);
+    }
+  }
+
+  &__learning {
+    transform: skewX(12deg);
+    text-align: center;
+    padding: 5px;
+    display: grid;
+
+    grid-template-rows: repeat(1, 50px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+
+    @media only screen and (max-width: $bp-large) {
+      transform: skewX(8deg);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      transform: skewX(0deg);
+    }
+
+  }
+}
+
+// .heading-secondary {
+//   font-size: 3rem;
+//   font-weight: 700;
+//   color: $color-white;
+//   text-transform: uppercase;
+//   margin: 1rem auto;
+//   padding: 1rem;
+//   transform: skewX(12deg);
+// }

@@ -1,0 +1,75 @@
+@import "../../main.scss";
+@import "../../sass/animations.scss";
+
+.btn {
+    &,
+      &:link,
+      &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 2rem;
+        transition: all 0.2s;
+        position: relative;
+        font-size: $default-font-size;
+  
+        // change for the <button> element
+        border:none;
+        cursor: pointer;
+
+        @media only screen and (max-width: $bp-large) {
+          padding: 2.5rem 5rem;
+          border-radius: 2.5rem;
+      }
+        @media only screen and (max-width: $bp-small) {
+          // margin: 1rem;
+          padding: 3.5rem 9rem;
+          border-radius: 3.5rem;
+      }
+      }
+  
+      &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 2rem 3rem rgba($color-black, .2);
+          background-color:$color-white ;
+    
+          &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+          }
+      }
+    
+      &:active,
+      &:focus {
+        outline: none;
+          transform: translateY(-1px);
+          box-shadow: 0 1.5rem 2rem rgba($color-black, .2)
+      }
+    
+      &--white {
+        background-color:$color-white ;
+        color: $primary-color-dark-1;
+        &::after {
+          background-color: $color-white;
+        }
+      }
+    
+      &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 0.4s;
+      }
+    
+      &--animated {
+        animation: moveInBottom 0.5s ease-out 0.75s;
+        animation-fill-mode: backwards;
+      }
+    }

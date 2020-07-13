@@ -1,0 +1,67 @@
+@import "../../main.scss";
+
+
+.navz {
+  &__Btn {
+  backface-visibility: hidden;
+  color: $color-white;
+  display: block;
+  padding: 0.5em 1em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+}
+  &__Btn:hover {
+  color: $primary-color;
+}
+  &__Btn:before {
+  left: 25%;
+}
+  &__Btn:after {
+  left: 75%;
+}
+  
+&__Btn:before,
+&__Btn:after {
+  background-color: $color-white;
+  position: absolute;
+  width: 26%;
+  top: 50%;
+  bottom: 50%;
+  content: '';
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+ &__Btn:before {
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+}  
+  &__Btn:after {
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+
+ li:hover &__Btn:before,
+ li:hover &__Btn:after
+ {
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+}
+
+  &__Btn:before{
+  -webkit-transition-delay: 0.075s;
+  transition-delay: 0.075s;
+}
+    &__Btn:after {
+  -webkit-transition-delay: 0.225s;
+  transition-delay: 0.225s;
+}
+  
+}
+
+
+  
