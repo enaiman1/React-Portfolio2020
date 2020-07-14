@@ -9,7 +9,7 @@ import Cards from "../../components/Cards/Cards";
 const Portfolio = props =>{
   return (
     <header className={classes.project}>
-      <video autoPlay="autoplay" loop="loop" muted className={classes.Video}>
+      <video playsInline="playsinline" autoPlay="autoplay" loop="loop" muted autoBuffer="autobuffer" className={classes.Video}>
         <source src={VideoSource} type="video/mp4" />
         <source src={VideoSource} type="video/ogg" />
         Your browser does not support the video tag.

@@ -1,14 +1,16 @@
 # Descrption
-This is my Portfolio recreated for 2020, which showcase my skills and projects in web development. This was bult with React and vanilla CSS using Sass as a preprocessor. No framework or additional libraries were used to create this portfolio
+This is my Portfolio recreated for 2020. It is a pleasure to showcase my skills and projects in web development. This was bult with React and vanilla CSS using Sass as a preprocessor. No framework or additional libraries were used to create this portfolio
 
-Built following this [Mern Tutorial](https://blog.bitsrc.io/build-a-login-auth-app-with-mern-stack-part-1-c405048e3669 "Mern tutorial")
 
-## Demo
-live link coming soon
-<!-- check out a demo of this app [Here](https://hidden-hollows-61647.herokuapp.com/ "Demo") -->
+## Live
+My Portfolio is now live
+check out it out [Here](https://ericnaiman.com/ "Live Portfolio")
+
+## Hosting
+This site is hosted on [Vercel](https://vercel.com/ "Vercel.com")
 
 ## Technologies Used
- | [React](https://reactjs.org/ "React") | [Sass](https://sass-lang.com/ "Sass preprocessor") 
+ | [React](https://reactjs.org/ "React") | [Sass](https://sass-lang.com/ "Sass preprocessor") | [FormSpree](https://formspree.io/ "Form Spree")
 
 ## Usage and Installation
 Feel free to clone or fork this repo if you find it useful. 
@@ -16,4 +18,4 @@ To install dependencies make sure to run:
 ```npm install```
 
 To run full app: 
-```npm run dev```
+```npm start```
