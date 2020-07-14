@@ -11,7 +11,8 @@
     }
 
     @media only screen and (max-width: $bp-small) {
-      transform: skewX(0deg);
+      transform: skewX(6deg);
+      padding: 2rem;
     }
   }
 
@@ -77,6 +78,9 @@
     margin-bottom: 2rem;
     text-align: center;
     justify-content: center;
+     }
+   @media only screen and (max-width: $bp-small) {
+   
      }
   }
   form label {

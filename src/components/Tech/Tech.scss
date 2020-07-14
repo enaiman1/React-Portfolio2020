@@ -22,7 +22,7 @@
     }
 
     @media only screen and (max-width: $bp-small) {
-      transform: skewX(0deg);
+      transform: skewX(5deg);
     }
   }
 
@@ -36,23 +36,16 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
 
-    @media only screen and (max-width: $bp-large) {
+  }
+
+  @media only screen and (max-width: $bp-large) {
       transform: skewX(8deg);
     }
 
-    @media only screen and (max-width: $bp-small) {
-      transform: skewX(0deg);
-    }
-
+  @media only screen and (max-width: $bp-small) {
+    // transform: skewX(6deg);
+    padding: 1rem;
   }
 }
 
-// .heading-secondary {
-//   font-size: 3rem;
-//   font-weight: 700;
-//   color: $color-white;
-//   text-transform: uppercase;
-//   margin: 1rem auto;
-//   padding: 1rem;
-//   transform: skewX(12deg);
-// }
+

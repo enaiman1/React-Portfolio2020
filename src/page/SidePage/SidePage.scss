@@ -179,12 +179,12 @@
     }
 
      @media only screen and (max-width: $bp-small) {
-      transform: skewX(0deg);
+      // transform: skewX(-5deg);
       margin: 3rem auto;
       padding: 2rem;
       padding-left: 1rem;
       width: 80%;
-      height: 65vh;
+      height: 60vh;
       box-shadow: -1rem 1rem 1rem rgba($color-white, 0.3);
 
       overflow: auto;

@@ -2,15 +2,6 @@
 @import "../../sass/animations.scss";
 
 .about {
-  // width: 75%;
-  // margin: 0 auto;
-  // box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
-  // background-color: rgba($color-white, 0.6);
-  // border-radius: 10px;
-  // padding: 6rem;
-  // padding-left: 9rem;
-  // font-size: $default-font-size;
-  // transform: skewX(-12deg);
 
   &__shape {
     width: 20rem;
@@ -32,7 +23,7 @@
     
 
     @media only screen and (max-width: $bp-small) {
-      transform: skewX(0deg);
+      transform: skewX(8deg);
     }
   }
 
@@ -86,7 +77,8 @@
     }
   
     @media only screen and (max-width: $bp-small) {
-      transform: skewX(0deg);
+      transform: skewX(6deg);
+      padding: 2rem
     }
   }
 
