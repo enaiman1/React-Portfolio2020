@@ -179,7 +179,7 @@
     }
 
      @media only screen and (max-width: $bp-small) {
-      // transform: skewX(-5deg);
+      transform: skewX(0deg);
       margin: 3rem auto;
       padding: 2rem;
       padding-left: 1rem;
