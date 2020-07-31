@@ -7,7 +7,7 @@ function About(props) {
   return (
     <section className="about">
       <figure className="about__shape">
-        <img src={Biopic} alt="Bio Pic of Eirc" className="about__img" />
+        <img src={Biopic} alt="Bio Pic of Eric" className="about__img" />
         <figcaption className="about__caption">Eric Naiman</figcaption>
       </figure>
       <div className="about__text">
