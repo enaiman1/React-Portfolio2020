@@ -2,12 +2,12 @@ const projects = [
 
       {
         id: 1,
-        pName: "Budget Sight",
-        image: require('../../assets/img/budget.jpg'),
-        description: `This MERN Stack application helps you track & budget your finances.
+        pName: "Sunshin Pines",
+        image: require('../../assets/img/sunshinePines.jpg'),
+        description: `CMS & Blog for a nursing home facility using Gatsby JS
         `,
-        website:'https://budget-sight.herokuapp.com/',
-        github:'https://github.com/enaiman1/budget-sight'
+        website:'https://sunshine-pines.netlify.app/',
+        github:'https://github.com/enaiman1/Sunshine-Pines'
 
     },
     {
