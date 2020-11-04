@@ -2,7 +2,7 @@ const projects = [
 
       {
         id: 1,
-        pName: "Sunshin Pines",
+        pName: "Sunshine Pines",
         image: require('../../assets/img/sunshinePines.jpg'),
         description: `CMS & Blog for a nursing home facility using Gatsby JS
         `,
