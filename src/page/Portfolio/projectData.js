@@ -2,23 +2,22 @@ const projects = [
 
       {
         id: 1,
+        pName: "Impeccable Gentleman",
+        image: require('../../assets/img/cocktail.jpg'),
+        description: `A freelance project built with a custom word press theme
+        `,
+        website:'https://impeccablegentleman.net/',
+        github:'https://github.com/enaiman1/'
+
+    },
+      {
+        id: 2,
         pName: "Sunshine Pines",
         image: require('../../assets/img/sunshinePines.jpg'),
         description: `CMS & Blog for a nursing home facility using Gatsby JS
         `,
         website:'https://sunshine-pines.netlify.app/',
         github:'https://github.com/enaiman1/Sunshine-Pines'
-
-    },
-    {
-        id: 2,
-        pName: "Literature Logster",
-        image: require('../../assets/img/gbooks.jpg'),
-        description: `A MERN stack application, that will help you find
-                      & save the books your interested in.
-        `,
-        website:'https://shielded-reef-62266.herokuapp.com/',
-        github:'https://github.com/enaiman1/Google-Book_Search'
 
     },
     {
@@ -30,11 +29,19 @@ const projects = [
         github:'https://github.com/enaiman1/jam-mate'
 
     },
-
-
-
     {
         id: 4,
+        pName: "Literature Logster",
+        image: require('../../assets/img/gbooks.jpg'),
+        description: `A MERN stack application, that will help you find
+                      & save the books your interested in.
+        `,
+        website:'https://shielded-reef-62266.herokuapp.com/',
+        github:'https://github.com/enaiman1/Google-Book_Search'
+
+    },
+    {
+        id: 5,
         pName: "PasswordGenerator",
         image: require('../../assets/img/password.jpg'),
         description: 'This Angular application will generate a random password that you can use on any website',
@@ -42,18 +49,6 @@ const projects = [
         github:'https://github.com/enaiman1/AngularPasswordGenerator'
 
     },
-    {
-        id: 5,
-        pName: "Rail Times",
-        image: require('../../assets/img/tracks.jpg'),
-        description: `Organize & keep track of a trains 
-                      arrival and departure in realtime'
-        `,
-        website:'https://enaiman1.github.io/trainSchedule/',
-        github:'https://github.com/enaiman1/trainSchedule'
-
-    }
-    ,
     {
         id: 6,
         pName: "Assiduous",

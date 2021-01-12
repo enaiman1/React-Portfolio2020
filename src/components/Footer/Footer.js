@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.scss";
-import resume from "../../assets/ENResume20.pdf";
+import resume from "../../assets/ENResume21P.pdf";
 function Footer() {
   return (
     <footer className="footer">
